@@ -17,13 +17,13 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" onwheel="changeActiveTabOnScroll()">
         <!-- nav bar -->
         <div class="row bg-green">
             <div class="col-sm-12" id="home">
                 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-green"
                     style="border-bottom: solid 1px white;">
-                    <a class="navbar-brand" href="#" onclick="myFunction(this)">VIVA</a>
+                    <a class="navbar-brand" href="#" onclick="changeActiveTabOnClick(this)">VIVA</a>
                     <button class=" navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -32,37 +32,24 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav nav-tabs" id="myTab" role="tablist" style="border-bottom:#00724E">
                             <li class="nav-item">
-                                <a id="home_aTag" class="nav-link active" href="#home" onclick="myFunction(this)"
-                                    style="color:white">Home
+                                <a id="home_aTag" class="nav-link active" href="#home"
+                                    onclick="changeActiveTabOnClick(this)" style="color:white">Home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#features" onclick="myFunction(this)"
-                                    style="color:white">Features</a>
+                                <a id="features_aTag" class="nav-link" href="#features"
+                                    onclick="changeActiveTabOnClick(this)" style="color:white">Features</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#feedback" onclick="myFunction(this)"
-                                    style="color:white">Feedback</a>
+                                <a id="feedback_aTag" class="nav-link" href="#feedback"
+                                    onclick="changeActiveTabOnClick(this)" style="color:white">Feedback</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact" onclick="myFunction(this)"
-                                    style="color:white">Contact</a>
+                                <a id="contact_aTag" class="nav-link" href="#contact"
+                                    onclick="changeActiveTabOnClick(this)" style="color:white">Contact</a>
                             </li>
                         </ul>
                     </div>
-                    <!-- Function to change the active tab -->
-                    <script>
-                        function myFunction(aTag) {
-                            var active = document.getElementsByClassName("nav-link active")[0]
-                            active.className = "nav-link";
-                            if (aTag.className !== "navbar-brand") {
-                                aTag.className = "nav-link active"
-                            }
-                            else {
-                                document.getElementById("home_aTag").className = "nav-link active";
-                            }
-                        }
-                    </script>
                 </nav>
             </div>
         </div>
@@ -286,6 +273,7 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
