@@ -28,11 +28,8 @@ function changeActiveTabOnScroll() {
         curr = "contact"
     }
     if (typeof curr !== "undefined") {
-        console.log(curr)
         var active = document.getElementsByClassName("nav-link active")[0]
-        console.log(active)
         active.className = "nav-link";
-        console.log(document.getElementById(`${curr}_aTag`))
         document.getElementById(`${curr}_aTag`).className = "nav-link active"
     }
 }
